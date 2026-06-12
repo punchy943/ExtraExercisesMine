@@ -5,31 +5,31 @@ public class MoreOperators
     // 1. Easy: subtraction
     public int Subtract(int a, int b)
     {
-        throw new NotImplementedException(); // TODO
+        return a-b; // TODO
     }
 
     // 2. Easy: multiplication
     public int Multiply(int a, int b)
     {
-        throw new NotImplementedException(); // TODO
+        return a * b; // TODO
     }
 
     // 3. Easy: is the number odd?
     public bool IsOdd(int x)
     {
-        throw new NotImplementedException(); // TODO
+        return x%2 != 0; // TODO
     }
 
     // 4. Easy: is the number positive (strictly greater than zero)?
     public bool IsPositive(int x)
     {
-        throw new NotImplementedException(); // TODO
+        return x>0; // TODO
     }
 
     // 5. Easy: is the number zero?
     public bool IsZero(int x)
     {
-        throw new NotImplementedException(); // TODO
+        return x==0; // TODO
     }
 
     // 6. Medium: is the number divisible by both 3 and 5?

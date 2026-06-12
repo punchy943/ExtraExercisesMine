@@ -2,7 +2,7 @@ namespace TheCourse.M03_CSharp101.Exercises.M03_Operators;
 
 public class MoreOperatorsTests
 {
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(8, 3, 5)]
     [InlineData(3, 8, -5)]
     [InlineData(5, 5, 0)]
@@ -11,7 +11,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().Subtract(a, b));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(4, 3, 12)]
     [InlineData(0, 5, 0)]
     [InlineData(-2, 3, -6)]
@@ -20,7 +20,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().Multiply(a, b));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(3, true)]
     [InlineData(4, false)]
     [InlineData(0, false)]
@@ -30,7 +30,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().IsOdd(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(5, true)]
     [InlineData(0, false)]
     [InlineData(-5, false)]
@@ -39,7 +39,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().IsPositive(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(0, true)]
     [InlineData(1, false)]
     [InlineData(-1, false)]
