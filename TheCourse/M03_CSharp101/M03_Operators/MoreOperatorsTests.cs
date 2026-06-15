@@ -25,41 +25,41 @@ public class MoreOperatorsTests
     [InlineData(4, false)]
     [InlineData(0, false)]
     [InlineData(-3, true)]
-    public void IsOdd_recognizes_odd_numbers(int input, bool expected)
+    public void IsOdd_recognizes_odd_numbers(int x, bool expected)
     {
-        Assert.Equal(expected, new MoreOperators().IsOdd(input));
+        Assert.Equal(expected, new MoreOperators().IsOdd(x));
     }
 
     [Theory]
     [InlineData(5, true)]
     [InlineData(0, false)]
     [InlineData(-5, false)]
-    public void IsPositive_recognizes_strictly_positive_numbers(int input, bool expected)
+    public void IsPositive_recognizes_strictly_positive_numbers(int x, bool expected)
     {
-        Assert.Equal(expected, new MoreOperators().IsPositive(input));
+        Assert.Equal(expected, new MoreOperators().IsPositive(x));
     }
 
     [Theory]
     [InlineData(0, true)]
     [InlineData(1, false)]
     [InlineData(-1, false)]
-    public void IsZero_recognizes_zero(int input, bool expected)
+    public void IsZero_recognizes_zero(int x, bool expected)
     {
-        Assert.Equal(expected, new MoreOperators().IsZero(input));
+        Assert.Equal(expected, new MoreOperators().IsZero(x));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(15, true)]
     [InlineData(30, true)]
     [InlineData(9, false)]
     [InlineData(10, false)]
     [InlineData(0, true)]
-    public void IsDivisibleByThreeAndFive_checks_both_conditions(int input, bool expected)
+    public void IsDivisibleByThreeAndFive_checks_both_conditions(int x, bool expected)
     {
-        Assert.Equal(expected, new MoreOperators().IsDivisibleByThreeAndFive(input));
+        Assert.Equal(expected, new MoreOperators().IsDivisibleByThreeAndFive(x));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(5, 1, 10, true)]
     [InlineData(1, 1, 10, true)]
     [InlineData(10, 1, 10, true)]
@@ -70,7 +70,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().IsBetweenInclusive(value, min, max));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(true, false, true)]
     [InlineData(false, true, true)]
     [InlineData(true, true, false)]
@@ -80,7 +80,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().ExactlyOneIsTrue(left, right));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(5, 10, 10)]
     [InlineData(10, 5, 10)]
     [InlineData(7, 7, 7)]
@@ -90,7 +90,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().Max(a, b));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(5, 10, 5)]
     [InlineData(10, 5, 5)]
     [InlineData(7, 7, 7)]

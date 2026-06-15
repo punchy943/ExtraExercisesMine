@@ -5,7 +5,7 @@ public class MoreOperators
     // 1. Easy: subtraction
     public int Subtract(int a, int b)
     {
-        return a-b; // TODO
+        return a - b; // TODO
     }
 
     // 2. Easy: multiplication
@@ -17,49 +17,57 @@ public class MoreOperators
     // 3. Easy: is the number odd?
     public bool IsOdd(int x)
     {
-        return x%2 != 0; // TODO
+        return x % 2 != 0; // TODO
     }
 
     // 4. Easy: is the number positive (strictly greater than zero)?
     public bool IsPositive(int x)
     {
-        return x>0; // TODO
+        return x > 0; // TODO
     }
 
     // 5. Easy: is the number zero?
     public bool IsZero(int x)
     {
-        return x==0; // TODO
+        return x == 0; // TODO
     }
 
     // 6. Medium: is the number divisible by both 3 and 5?
     public bool IsDivisibleByThreeAndFive(int x)
     {
-        throw new NotImplementedException(); // TODO
+        return x % 3 == 0 && x % 5 == 0; // TODO
     }
 
     // 7. Medium: is the value within the inclusive range [min, max]?
     public bool IsBetweenInclusive(int value, int min, int max)
     {
-        throw new NotImplementedException(); // TODO
+        return min <= value && value <= max; // TODO
     }
 
     // 8. Medium: returns true if exactly one of the two booleans is true (XOR)
     public bool ExactlyOneIsTrue(bool left, bool right)
     {
-        throw new NotImplementedException(); // TODO
+        return left ^ right; // TODO
     }
 
     // 9. Medium: returns the largest of two numbers
     public int Max(int a, int b)
     {
-        throw new NotImplementedException(); // TODO
+        if (a < b)
+        {
+            return b;
+        }
+        return a; // TODO
     }
 
     // 10. Medium: returns the smallest of two numbers
     public int Min(int a, int b)
     {
-        throw new NotImplementedException(); // TODO
+        if (a < b)
+        {
+            return a;
+        }
+        return b; // TODO
     }
 
     // 11. Medium: returns "Pass" if score >= 50, otherwise "Fail"
