@@ -100,7 +100,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().Min(a, b));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(75, "Pass")]
     [InlineData(50, "Pass")]
     [InlineData(49, "Fail")]
@@ -110,7 +110,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().GetResult(score));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(4, 8)]
     [InlineData(5, 5)]
     [InlineData(0, 0)]
@@ -120,7 +120,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().DoubleIfEven(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(2024, true)]
     [InlineData(2023, false)]
     [InlineData(2000, true)]
@@ -131,7 +131,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().IsLeapYear(year));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(1, 2, 3, 2)]
     [InlineData(3, 1, 2, 2)]
     [InlineData(5, 5, 1, 5)]

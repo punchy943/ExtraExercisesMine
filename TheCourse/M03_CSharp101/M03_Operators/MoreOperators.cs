@@ -73,26 +73,47 @@ public class MoreOperators
     // 11. Medium: returns "Pass" if score >= 50, otherwise "Fail"
     public string GetResult(int score)
     {
-        throw new NotImplementedException(); // TODO
+        if (score < 50)
+        {
+            return "Fail";
+        }
+        return "Pass"; // TODO
     }
 
     // 12. Medium: doubles the value if it is even, otherwise leaves it unchanged
     public int DoubleIfEven(int x)
     {
-        throw new NotImplementedException(); // TODO
+        if (x % 2 == 0)
+        {
+            return x * 2;
+        }
+        return x; // TODO
     }
 
     // 13. Medium: returns true if the year is a leap year
     // (divisible by 4, but not by 100, unless also divisible by 400)
     public bool IsLeapYear(int year)
     {
-        throw new NotImplementedException(); // TODO
+        if ((year % 4 == 0 && !(year % 100 == 0)) || (year % 400 == 0))
+        {
+            return true;
+        }
+        return false; 
     }
 
     // 14. Hard: returns the middle value of three numbers
     public int Median(int a, int b, int c)
     {
-        throw new NotImplementedException(); // TODO
+        if ((a >= b && a <= c) || (a >= c && a <= c))
+        {
+            return a;
+        }
+        if ((b >= a && b <= c) || (b >= c && b <= a))
+        {
+            return b;
+        }
+        return c;
+         // TODO
     }
 
     // 15. Hard: returns true if all three booleans are true
