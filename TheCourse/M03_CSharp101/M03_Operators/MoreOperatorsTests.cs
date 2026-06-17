@@ -141,7 +141,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().Median(a, b, c));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(true, true, true, true)]
     [InlineData(true, true, false, false)]
     [InlineData(false, false, false, false)]
@@ -150,7 +150,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().AllAreTrue(a, b, c));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(100, 25, 75)]
     [InlineData(200, 50, 100)]
     [InlineData(100, 0, 100)]
@@ -159,7 +159,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().ApplyPercentageDiscount(price, percentage));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData('a', true)]
     [InlineData('E', true)]
     [InlineData('b', false)]
@@ -169,7 +169,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().IsVowel(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(95, "A")]
     [InlineData(85, "B")]
     [InlineData(75, "C")]

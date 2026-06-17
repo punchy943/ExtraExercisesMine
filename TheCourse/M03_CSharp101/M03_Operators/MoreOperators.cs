@@ -1,3 +1,5 @@
+using System.Reflection.PortableExecutable;
+
 namespace TheCourse.M03_CSharp101.Exercises.M03_Operators;
 
 public class MoreOperators
@@ -94,52 +96,49 @@ public class MoreOperators
     // (divisible by 4, but not by 100, unless also divisible by 400)
     public bool IsLeapYear(int year)
     {
-        if ((year % 4 == 0 && !(year % 100 == 0)) || (year % 400 == 0))
-        {
-            return true;
-        }
-        return false; 
+        return (year % 4 == 0 && !(year % 100 == 0)) || (year % 400 == 0);
     }
 
     // 14. Hard: returns the middle value of three numbers
     public int Median(int a, int b, int c)
     {
-        if ((a >= b && a <= c) || (a >= c && a <= c))
-        {
-            return a;
-        }
-        if ((b >= a && b <= c) || (b >= c && b <= a))
-        {
-            return b;
-        }
-        return c;
-         // TODO
+        return (a >= b && a <= c) || (a >= c && a <= c) ? a : 
+                (b >= a && b <= c) || (b >= c && b <= a) ? b : c;
+        // TODO
     }
 
     // 15. Hard: returns true if all three booleans are true
     public bool AllAreTrue(bool a, bool b, bool c)
     {
-        throw new NotImplementedException(); // TODO
+        return a && b && c; // TODO
     }
 
     // 16. Hard: returns the price after applying a percentage discount
     // (e.g. ApplyPercentageDiscount(100, 25) returns 75)
     public decimal ApplyPercentageDiscount(decimal price, decimal percentage)
     {
-        throw new NotImplementedException(); // TODO
+        return price - price * percentage / 100; // TODO
     }
 
     // 17. Hard: returns true if the character is a vowel (a, e, i, o, u - case insensitive)
     public bool IsVowel(char c)
     {
-        throw new NotImplementedException(); // TODO
+        var letter = char.ToUpper(c);
+        if (letter == 'A' || letter == 'E' || letter == 'I' || letter == 'O' || letter == 'U')
+        {
+            return true;
+        }
+        return false; // TODO
     }
 
     // 18. Hard: returns the grade letter based on score
     // 90+: "A", 80-89: "B", 70-79: "C", 60-69: "D", below 60: "F"
     public string GetGrade(int score)
     {
-        throw new NotImplementedException(); // TODO
+        return score > 89 ? "A" :
+               score > 79 ? "B" :
+               score > 69 ? "C" :
+               score > 59 ? "D" : "F";
     }
 
     // 19. Hard: returns true if the number is a power of two
