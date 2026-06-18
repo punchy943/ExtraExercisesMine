@@ -2,7 +2,7 @@ namespace TheCourse.M03_CSharp101.Exercises.M04_Conditions;
 
 public class MoreConditionsTests
 {
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(-5, true)]
     [InlineData(0, false)]
     [InlineData(5, false)]
@@ -11,7 +11,7 @@ public class MoreConditionsTests
         Assert.Equal(expected, new MoreConditions().IsNegative(number));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(65, "Yes")]
     [InlineData(70, "Yes")]
     [InlineData(64, "No")]
@@ -21,7 +21,7 @@ public class MoreConditionsTests
         Assert.Equal(expected, new MoreConditions().IsSenior(age));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("password", true)]
     [InlineData("12345678", true)]
     [InlineData("short", false)]
@@ -31,7 +31,7 @@ public class MoreConditionsTests
         Assert.Equal(expected, new MoreConditions().IsPasswordLongEnough(password));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("zaterdag", "weekend")]
     [InlineData("zondag", "weekend")]
     [InlineData("maandag", "weekdag")]
@@ -41,7 +41,7 @@ public class MoreConditionsTests
         Assert.Equal(expected, new MoreConditions().GetDayType(day));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(20, true, true)]
     [InlineData(17, true, false)]
     [InlineData(20, false, false)]
@@ -51,7 +51,7 @@ public class MoreConditionsTests
         Assert.Equal(expected, new MoreConditions().MayDrive(age, hasLicense));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(10, 5)]
     [InlineData(11, 5)]
     [InlineData(12, 10)]
@@ -64,7 +64,7 @@ public class MoreConditionsTests
         Assert.Equal(expected, new MoreConditions().TicketPrice(age));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(1, true)]
     [InlineData(100, true)]
     [InlineData(50, true)]
@@ -76,7 +76,7 @@ public class MoreConditionsTests
         Assert.Equal(expected, new MoreConditions().IsValidPercentage(value));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(17.0, "Ondergewicht")]
     [InlineData(18.5, "Normaal")]
     [InlineData(22.0, "Normaal")]
@@ -90,7 +90,7 @@ public class MoreConditionsTests
         Assert.Equal(expected, new MoreConditions().BmiCategory(bmi));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData("admin", "1234", true)]
     [InlineData("admin", "wrong", false)]
     [InlineData("user", "1234", false)]
@@ -100,7 +100,7 @@ public class MoreConditionsTests
         Assert.Equal(expected, new MoreConditions().IsLoginSuccessful(username, password));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(12, "Winter")]
     [InlineData(1, "Winter")]
     [InlineData(2, "Winter")]
@@ -115,7 +115,7 @@ public class MoreConditionsTests
         Assert.Equal(expected, new MoreConditions().GetSeason(month));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(20, true, 20)]
     [InlineData(30, true, 35)]
     [InlineData(70, true, 35)]
