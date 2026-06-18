@@ -182,7 +182,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().GetGrade(score));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(1, true)]
     [InlineData(2, true)]
     [InlineData(3, false)]
@@ -194,7 +194,7 @@ public class MoreOperatorsTests
         Assert.Equal(expected, new MoreOperators().IsPowerOfTwo(input));
     }
 
-    [Theory(Skip = "To Do")]
+    [Theory]
     [InlineData(true, true, true, 3)]
     [InlineData(true, false, true, 2)]
     [InlineData(false, false, false, 0)]

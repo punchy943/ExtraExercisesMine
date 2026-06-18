@@ -55,54 +55,38 @@ public class MoreOperators
     // 9. Medium: returns the largest of two numbers
     public int Max(int a, int b)
     {
-        if (a < b)
-        {
-            return b;
-        }
-        return a; // TODO
+        return a < b ? b : a; // TODO
     }
 
     // 10. Medium: returns the smallest of two numbers
     public int Min(int a, int b)
     {
-        if (a < b)
-        {
-            return a;
-        }
-        return b; // TODO
+        return a < b ? a : b; // TODO
     }
 
     // 11. Medium: returns "Pass" if score >= 50, otherwise "Fail"
     public string GetResult(int score)
     {
-        if (score < 50)
-        {
-            return "Fail";
-        }
-        return "Pass"; // TODO
+        return score < 50 ? "Fail" : "Pass"; // TODO
     }
 
     // 12. Medium: doubles the value if it is even, otherwise leaves it unchanged
     public int DoubleIfEven(int x)
     {
-        if (x % 2 == 0)
-        {
-            return x * 2;
-        }
-        return x; // TODO
+        return x % 2 == 0 ? x * 2 : x; // TODO
     }
 
     // 13. Medium: returns true if the year is a leap year
     // (divisible by 4, but not by 100, unless also divisible by 400)
     public bool IsLeapYear(int year)
     {
-        return (year % 4 == 0 && !(year % 100 == 0)) || (year % 400 == 0);
+        return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
     }
 
     // 14. Hard: returns the middle value of three numbers
     public int Median(int a, int b, int c)
     {
-        return (a >= b && a <= c) || (a >= c && a <= c) ? a : 
+        return (a >= b && a <= c) || (a >= c && a <= c) ? a :
                 (b >= a && b <= c) || (b >= c && b <= a) ? b : c;
         // TODO
     }
@@ -124,11 +108,12 @@ public class MoreOperators
     public bool IsVowel(char c)
     {
         var letter = char.ToUpper(c);
-        if (letter == 'A' || letter == 'E' || letter == 'I' || letter == 'O' || letter == 'U')
-        {
-            return true;
-        }
-        return false; // TODO
+        return letter == 'A' ||
+            letter == 'E' ||
+            letter == 'I' ||
+            letter == 'O' ||
+            letter == 'U';
+
     }
 
     // 18. Hard: returns the grade letter based on score
@@ -145,12 +130,22 @@ public class MoreOperators
     // (1, 2, 4, 8, 16, ... are powers of two)
     public bool IsPowerOfTwo(int x)
     {
-        throw new NotImplementedException(); // TODO
+        
+        return x != 0 && (x & (x - 1)) == 0;
+        // if (x <= 0)
+        // {
+        //     return false;
+        // }
+        // while (x % 2 == 0)
+        // {
+        //     x /= 2; 
+        // } 
+        // return x == 1; // TODO
     }
 
     // 20. Hard: returns the number of true values among the three booleans
     public int CountTrue(bool a, bool b, bool c)
     {
-        throw new NotImplementedException(); // TODO
+        return (a ? 1 : 0) + (b ? 1 : 0) + (c ? 1 : 0); // TODO
     }
 }
