@@ -86,7 +86,7 @@ public class MoreOperators
     // 14. Hard: returns the middle value of three numbers
     public int Median(int a, int b, int c)
     {
-        return (a >= b && a <= c) || (a >= c && a <= c) ? a :
+        return (a >= b && a <= c) || (a >= c && a <= b) ? a :
                 (b >= a && b <= c) || (b >= c && b <= a) ? b : c;
         // TODO
     }
@@ -107,13 +107,13 @@ public class MoreOperators
     // 17. Hard: returns true if the character is a vowel (a, e, i, o, u - case insensitive)
     public bool IsVowel(char c)
     {
-        var letter = char.ToUpper(c);
-        return letter == 'A' ||
-            letter == 'E' ||
-            letter == 'I' ||
-            letter == 'O' ||
-            letter == 'U';
-
+        // var letter = char.ToUpper(c);
+        // return letter == 'A' ||
+        //     letter == 'E' ||
+        //     letter == 'I' ||
+        //     letter == 'O' ||
+        //     letter == 'U';
+        return "AEIOU".Contains(char.ToUpper(c));
     }
 
     // 18. Hard: returns the grade letter based on score
@@ -131,16 +131,12 @@ public class MoreOperators
     public bool IsPowerOfTwo(int x)
     {
         
-        return x != 0 && (x & (x - 1)) == 0;
-        // if (x <= 0)
-        // {
-        //     return false;
-        // }
-        // while (x % 2 == 0)
-        // {
-        //     x /= 2; 
-        // } 
-        // return x == 1; // TODO
+        // return x != 0 && (x & (x - 1)) == 0;
+        while (x % 2 == 0 && x != 0)
+        {
+            x /= 2; 
+        } 
+        return x == 1; // TODO
     }
 
     // 20. Hard: returns the number of true values among the three booleans

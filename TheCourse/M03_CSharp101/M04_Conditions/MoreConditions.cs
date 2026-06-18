@@ -78,13 +78,13 @@ public class MoreConditions
 
     // 8. Medium: returns the BMI category
     // bmi < 18.5: "Ondergewicht", 18.5 to 24.9: "Normaal", 25 to 29.9: "Overgewicht", 30 or higher: "Obesitas"
-    public string BmiCategory(double bmi)
+    public string BmiCategory(double bmi) 
     {
         return bmi switch
         {
             < 18.5 => "Ondergewicht",
-            >= 18.5 and < 25 => "Normaal",
-            >= 25 and < 30 => "Overgewicht",
+            < 25 => "Normaal",
+            < 30 => "Overgewicht",
             _ => "Obesitas"
         }; // TODO
     }
